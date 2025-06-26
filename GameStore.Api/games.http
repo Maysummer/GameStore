@@ -1,0 +1,7 @@
+GET http://localhost:5226
+
+###
+GET http://localhost:5226/games
+
+###
+GET http://localhost:5226/games/1
