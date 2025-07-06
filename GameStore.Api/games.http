@@ -4,15 +4,26 @@ GET http://localhost:5226
 GET http://localhost:5226/games
 
 ###
-GET http://localhost:5226/games/1
+GET http://localhost:5226/games/4
 
 ###
 POST http://localhost:5226/games
 Content-Type: application/json
 
 {
-  "name": "Game Title",
-  "genre": "Game Description",
-  "price": 59.99,
-  "releaseDate": "2023-10-01T00:00:00Z"
+  "name": "Game Nmeso",
+  "genre": "Game Description1",
+  "price": 59.98,
+  "releaseDate": "2023-11-01"
+}
+
+###
+PUT http://localhost:5226/games/4
+content-type: application/json
+
+{
+  "name": "Game Nmeso Updated",
+  "genre": "Game Description1 Updated",
+  "price": 49.99,
+  "releaseDate": "2023-11-01"
 }

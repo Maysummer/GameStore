@@ -33,6 +33,20 @@ app.MapPost("games", (CreateGameDTO newGame) =>
     return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
 });
 
+// PUT /games/1
+app.MapPut("games/{id}", (int id, UpdateGameDTO updatedGame) =>
+{
+    var gameIndex = games.FindIndex(game => game.Id == id);
+    games[gameIndex] = new GameDTO(
+        id,
+        updatedGame.Name,
+        updatedGame.Genre,
+        updatedGame.Price,
+        updatedGame.ReleaseDate);
+
+    return Results.NoContent();
+});
+
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
