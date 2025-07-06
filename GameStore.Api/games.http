@@ -27,3 +27,6 @@ content-type: application/json
   "price": 49.99,
   "releaseDate": "2023-11-01"
 }
+
+###
+DELETE http://localhost:5226/games/2
